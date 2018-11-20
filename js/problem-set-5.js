@@ -27,7 +27,21 @@ function mario() {
   ////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 1 CODE HERE
+  while (true) {
+    height=prompt("Please put your height ")
+    if (1<=height && height<=23){
+      console.log('1')
+      break;
+    }
+  }
 
+  for(let i=height; i>=0; i--){
+    let lines;
+    let space;
+    let hash;
+  
+  }
+  //document.GetById("mario-easy").innerHTML();
   ////////////////////////// DO NOT MODIFY
   check('mario', height); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
