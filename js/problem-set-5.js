@@ -25,7 +25,29 @@ function mario() {
   ////////////// DO NOT MODIFY
   let height; // DO NOT MODIFY
   ////////////// DO NOT MODIFY
-
+  
+  while (true){
+	height=prompt("Please enter a valid height");
+	if(height>=1 && 23>=height){
+		  break;
+	};
+  };
+  let i=1;
+  let hash='#';
+  let line='';
+  let spaces=height-1;
+  while (i<=height){
+	  for(let j=0;j<spaces;j++) {
+		  a+='&nbsp;';
+	  }
+	  spaces--;
+	  hash=hash+'#';
+	  line=line+hash+"</br>"
+	  i++;
+  }
+  document.getElementById("mario-easy-output").innerHTML=a;
+  
+	
   // WRITE YOUR EXERCISE 1 CODE HERE
 
   ////////////////////////// DO NOT MODIFY
