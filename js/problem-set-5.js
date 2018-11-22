@@ -34,18 +34,20 @@ function mario() {
   };
   let i=1;
   let hash='#';
-  let line='';
+  let lines='';
   let spaces=height-1;
+  
   while (i<=height){
-	  for(let j=0;j<spaces;j++) {
+	  let a='';
+	  for(let j=0;j<=spaces;j++) {
 		  a+='&nbsp;';
 	  }
 	  spaces--;
 	  hash=hash+'#';
-	  line=line+hash+"</br>"
+	  lines=lines+a+hash+"</br>";
 	  i++;
   }
-  document.getElementById("mario-easy-output").innerHTML=a;
+  document.getElementById("mario-easy-output").innerHTML=lines;
   
 	
   // WRITE YOUR EXERCISE 1 CODE HERE
