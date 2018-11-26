@@ -25,46 +25,35 @@ function mario() {
   ////////////// DO NOT MODIFY
   let height; // DO NOT MODIFY
   ////////////// DO NOT MODIFY
-  
+
+
+
+
+  // WRITE YOUR EXERCISE 1 CODE HERE
   while (true){
-	height=prompt("Please enter a valid height");
-	if(height>=1 && 23>=height){
-		  break;
-	};
+    height=prompt("Please enter a valid height");
+    height=Number(height);
+    if(height>=1 && height<=23 && Number.isInteger(height)){
+      break;
+    };
   };
   let i=1;
   let hash='#';
-  let lines='';
-  let spaces=height-1;
-  
+  let lines="<code>";
+  let spaces=height-2;
+
   while (i<=height){
-	  let a='';
-	  for(let j=0;j<=spaces;j++) {
-		  a+='&nbsp;';
-	  }
-	  spaces--;
-	  hash=hash+'#';
-	  lines=lines+a+hash+"</br>";
-	  i++;
+    let a='';
+    for(let j=0;j<=spaces;j++) {
+      a+='&nbsp;';
+    }
+    spaces--;
+    hash=hash+'#';
+    lines=lines+a+hash+"</br>";
+    i++;
   }
   document.getElementById("mario-easy-output").innerHTML=lines;
-  
-	
-  // WRITE YOUR EXERCISE 1 CODE HERE
-  while (true) {
-    height=prompt("Please put your height ")
-    if (1<=height && height<=23){
-      console.log('1')
-      break;
-    }
-  }
-
-  for(let i=height; i>=0; i--){
-    let lines;
-    let space;
-    let hash;
-  
-  }
+  lines=lines+"</code>"
   //document.GetById("mario-easy").innerHTML();
   ////////////////////////// DO NOT MODIFY
   check('mario', height); // DO NOT MODIFY
@@ -100,7 +89,30 @@ function marioAgain() {
   ////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 2 CODE HERE
-
+  while (true){
+    height=prompt("Please enter a valid height");
+    height=Number(height);
+    if(height>=1 && height<=23 && Number.isInteger(height)){
+      break;
+    };
+  };
+  let i=1;
+  let hash='#';
+  let lines="<code>";
+  let spaces_Before=height-2;
+  let spaces_After='&nbsp'+'&nbsp';
+  while (i<=height){
+    let a='';
+    for(let j=0;j<=spaces_Before;j++) {
+      a+='&nbsp;';
+    }
+    spaces_Before--;
+    hash=hash+'#';
+    lines=lines+a+hash+spaces_After+hash+"</br>";
+    i++;
+  }
+  document.getElementById("mario-hard-output").innerHTML=lines;
+  lines=lines+"</code>"
   //////////////////////////////// DO NOT MODIFY
   check('mario-again', height); // DO NOT MODIFY
   //////////////////////////////// DO NOT MODIFY
@@ -153,14 +165,15 @@ function credit() {
   //////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 3 CODE HERE
-
+  card=prompt("Enter your credit card number: ");
+  
   /*
    * NOTE: After reading in the card number and storing it in the 'card'
    *       variable, do not modify it. If you find it necessary to manipulate
    *       this value, you will need to create a second variable to serve
    *       as a copy of the 'card' variable.
    */
-
+   document.getElementById("credot").innerHTML='1';
   ///////////////////////// DO NOT MODIFY
   check('credit', card); // DO NOT MODIFY
   ///////////////////////// DO NOT MODIFY
