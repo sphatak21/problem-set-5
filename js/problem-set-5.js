@@ -362,7 +362,23 @@ function gymnastics() {
    *       scores.push(firstScore);   // your variable names for your scores
    *       scores.push(secondScore);  // will likely be different than mine
    */
-
+	let i=1;
+	while(i<=6){
+		inputScore=Number(prompt("Enter your score"));
+		if (inputScore>=1 && inputScore<=10 && Number.isInteger(inputScore)){
+			scores.push(inputScore);
+		i++;
+		}
+	}
+	scores.sort()
+	let max=scores[5];
+	let min=scores[0];
+	let revisedScores=[];
+	for(let j=1;j<5;j++){
+		revisedScores.push(scores[j]);
+	}
+	let averageScore=((revisedScores[0]+revisedScores[1]+revisedScores[2]+revisedScores[3])/4).toFixed(2);
+	document.getElementById("gymnastics-output").innerHTML="Discarded: "+min+", "+max+"</br>Score: "+averageScore;
   /////////////////////////////// DO NOT MODIFY
   check('gymnastics', scores); // DO NOT MODIFY
   /////////////////////////////// DO NOT MODIFY
