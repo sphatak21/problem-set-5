@@ -370,7 +370,7 @@ function gymnastics() {
 		i++;
 		}
 	}
-	scores.sort(funtion(a,b){return a-b})
+	scores.sort(function(a,b){return a-b;})
 	let max=scores[5];
 	let min=scores[0];
 	let revisedScores=[];
