@@ -364,13 +364,13 @@ function gymnastics() {
    */
 	let i=1;
 	while(i<=6){
-		inputScore=Number(prompt("Enter your score"));
+		let inputScore=Number(prompt("Enter your score"));
 		if (inputScore>=1 && inputScore<=10 && Number.isInteger(inputScore)){
 			scores.push(inputScore);
 		i++;
 		}
 	}
-	scores.sort()
+	scores.sort(funtion(a,b){return a-b})
 	let max=scores[5];
 	let min=scores[0];
 	let revisedScores=[];
@@ -412,7 +412,6 @@ function reportCard() {
   let quizTotal = 0; ////// DO NOT MODIFY
   let homeworkTotal = 0; // DO NOT MODIFY
   ///////////////////////// DO NOT MODIFY
-
   /*
    * NOTE: The 'testTotal', 'quizTotal', and 'homeworkTotal' variables
    *       should be representative of the sum of the test scores, quiz
@@ -424,13 +423,48 @@ function reportCard() {
   let quizzes = 0; //// DO NOT MODIFY
   let homeworks = 0; // DO NOT MODIFY
   ///////////////////// DO NOT MODIFY
-
+  
   /*
    * NOTE: The 'tests', 'quizzes', and 'homeworks' variables should be
    *       representative of the number of tests, quizzes, and homework
    *       grades the user enters, respectively.
    */
-
+	while (true){
+		let testsInput=prompt("Enter your test score");
+		if(testsInput==-1){
+			break;
+		}
+		if(Number(testsInput)>=0 && Number(testsInput<=100)){
+			testTotal=Number(testsInput)+testTotal;
+			tests++;
+		}
+	
+	}
+	while(true){
+		let quizInput=prompt("Enter your quiz score");
+		if (quizInput==-1){
+			break;
+		}
+		if(Number(quizInput)>=0 && Number(quizInput)<=100){
+			quizTotal=Number(quizInput)+quizTotal;
+			quizzes++;
+		}
+	}
+	while(true){
+		let homeworkInput=prompt("Enter your homework score");
+		if (homeworkInput==-1){
+			break;
+		}
+		if(Number(homeworkInput)>=0 && Number(homeworkInput)<=100){
+			homeworkTotal=Number(homeworkInput)+homeworkTotal;
+			homeworks++;
+		}
+	}
+	let testAverage=(testTotal/tests).toFixed(2);
+	let quizAverage=(quizTotal/quizzes).toFixed(2);
+	let homeworksAverage=(homeworkTotal/homeworks).toFixed(2);
+	grade=(.6*testAverage+.3*quizAverage+.1*homeworksAverage).toFixed(2);
+	document.getElementById("report-card-output").innerHTML="Tests: "+testAverage+"</br>Quizzes: "+quizAverage+"</br>Homework: "+homeworksAverage+"</br>Grade: "+grade;
   /////////////////////// DO NOT MODIFY
   check('report-card', // DO NOT MODIFY
     testTotal, ////////// DO NOT MODIFY
