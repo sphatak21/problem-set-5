@@ -365,12 +365,13 @@ function gymnastics() {
 	let i=1;
 	while(i<=6){
 		inputScore=Number(prompt("Enter your score"));
-		if (inputScore>=1 && inputScore<=10 && Number.isInteger(inputScore)){
+		if (inputScore>=1 && inputScore<=10){
 			scores.push(inputScore);
 		i++;
 		}
 	}
-	scores.sort()
+	scores.sort(function(a,b){return a-b});
+  console.log(scores)
 	let max=scores[5];
 	let min=scores[0];
 	let revisedScores=[];
@@ -424,7 +425,17 @@ function reportCard() {
   let quizzes = 0; //// DO NOT MODIFY
   let homeworks = 0; // DO NOT MODIFY
   ///////////////////// DO NOT MODIFY
+  while (true){
+    test=prompt("Enter your grade");
 
+    if(test=="-1") {
+      break;
+    }
+     {
+
+    }
+
+  }
   /*
    * NOTE: The 'tests', 'quizzes', and 'homeworks' variables should be
    *       representative of the number of tests, quizzes, and homework
